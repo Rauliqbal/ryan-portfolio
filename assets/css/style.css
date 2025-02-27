@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap");
+
+/* Variable */
+:root {
+   /* Variable Color */
+   --primary: #70c533;
+   --secondary: #939393;
+   --black: #26312b;
+   --background: #f1f1f1;
+   --green: #3b661d;
+   /* Font Family */
+   --font-poppins: "poppins", sans-serif;
+   --font-teko: "Teko", sans-serif;
+   /* Variable Font */
+   --font-weight-medium: 500;
+   --font-weight-semibold: 600;
+}
+/* button Custom */
+.btn-primary {
+   color: white;
+   background-color: var(--primary);
+   border: none;
+   border-radius: 30px;
+   padding: 8px 24px;
+   transition: all 0.3s ease-out;
+   font-weight: var(--font-weight-semibold);
+}
+.btn-primary:hover {
+   color: white;
+   background-color: var(--green);
+   border: none;
+}
+.btn-primary:active {
+   background-color: var(--green) !important;
+   scale: 0.95;
+}
+
+.card {
+   border: none;
+   border-radius: 12px;
+}
+
+.form-control {
+   border: none;
+   transition: all 0.3s;
+}
+.form-control:focus {
+   box-shadow: 0 0 0 3px rgba(112, 197, 51, 0.616);
+}
+
+/* input type number*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+input[type="number"] {
+   -moz-appearance: textfield;
+}
+
+/* Style Body */
+html {
+   scroll-behavior: smooth;
+}
+* {
+   text-decoration: none !important;
+}
+body {
+   font-family: var(--font-poppins);
+   position: relative;
+   background-color: var(--background);
+}
+section {
+   padding: 64px 0;
+   overflow: hidden;
+}
+.heading {
+   font-family: var(--font-teko);
+   font-size: 24px;
+   margin-bottom: 0;
+   line-height: 1em;
+   color: var(--primary);
+}
+.desc {
+   font-size: 16px;
+   color: var(--secondary);
+}
+
+.section-title {
+   font-size: 28px;
+   color: var(--black);
+   font-weight: var(--font-weight-semibold);
+}
+
+/* navbar */
+nav {
+   transition: all 0.4s;
+}
+.sticky {
+   background-color: #212529;
+   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.383);
+}
+.navbar-nav {
+   background-color: #212529 !important;
+   border-radius: 16px;
+}
+
+.navbar-brand {
+   color: #fff;
+}
+.navbar-toggler:focus {
+   box-shadow: none;
+}
+.navbar-nav .nav-link {
+   color: #fff;
+   text-transform: capitalize;
+}
+
+.nav-link:hover {
+   color: var(--green);
+}
+.nav-link.active {
+   color: var(--primary) !important;
+}
+
+/* Hero/banner */
+.banner-image {
+   background-image: url(https://images.unsplash.com/photo-1593642634367-d91a135587b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   box-shadow: inset 0 0 0 2000px rgba(20, 20, 20, 0.664);
+}
+#home .heading {
+   color: #fff;
+}
+.title {
+   font-size: 34px;
+   font-weight: var(--font-weight-semibold);
+   color: #fff;
+}
+.desc {
+   color: #fff;
+}
+
+a.socmed {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 50px;
+   height: 50px;
+   border-radius: 100%;
+   transition: all 0.3s ease-out;
+}
+.socmed:hover {
+   background-color: #fff;
+}
+
+.socmed .icon {
+   font-size: 24px;
+   color: #fff;
+   transition: all 0.3s ease-out;
+}
+.socmed:hover .icon {
+   color: #000;
+}
+
+/* Service */
+
+#service .card img {
+   width: 64px;
+}
+#service .card h3 {
+   font-size: 18px;
+   font-weight: var(--font-weight-medium);
+}
+#service .card-body {
+   padding: 24px 40px;
+}
+#service .card-body p {
+   color: var(--secondary);
+}
+
+/* About*/
+#about img {
+   border-radius: 0 32px 0 32px;
+}
+
+#about .desc {
+   color: var(--secondary);
+   line-height: 28px;
+   margin-top: 16px;
+}
+
+#about .heading {
+   color: var(--primary);
+}
+
+/* Portfolio */
+.filter-button {
+   border: none;
+   color: var(--secondary);
+   font-weight: var(--font-weight-medium);
+}
+
+.filter-button:hover {
+   color: var(--primary);
+}
+
+#portfolio .wrapper {
+   display: grid;
+   gap: 16px;
+   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.card-project {
+   border-radius: 12px;
+   overflow: hidden;
+   padding-left: 0;
+   padding-right: 0;
+   position: relative;
+   transition: all 0.3s ease-out;
+}
+
+.card-project:hover .overlay {
+   opacity: 100;
+}
+
+.card-project .overlay {
+   display: flex;
+   opacity: 0;
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.575);
+   inset: 0;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.3s;
+}
+
+.card-project .overlay a {
+   color: var(--primary);
+   font-size: 24px;
+   width: 46px;
+   height: 46px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #fff;
+   border-radius: 8px;
+   transition: all 0.3s ease-out;
+}
+.card-project .overlay a:hover {
+   background: #000;
+}
+
+.card-project img {
+   transition: 0.3s;
+}
+
+.card-project:hover img {
+   transform: scale(1.1);
+}
+
+/* Contact */
+.icon {
+   font-size: 24px;
+}
+
+#contact .socmed .icon {
+   color: var(--primary);
+}
+
+/* Footer */
+footer {
+   background-color: var(--primary);
+   padding: 24px 0;
+}
+footer p {
+   margin-bottom: 0;
+   color: white;
+   font-weight: var(--font-weight-medium);
+}
+/****** Mobile Version ******/
+@media (min-width: 990px) {
+   .navbar-nav {
+      background-color: transparent !important;
+   }
+
+   .section-title {
+      font-size: 34px;
+   }
+
+   .heading {
+      font-size: 32px;
+   }
+
+   .title {
+      font-size: 64px;
+   }
+
+   #portfolio .wrapper {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+   }
+}
